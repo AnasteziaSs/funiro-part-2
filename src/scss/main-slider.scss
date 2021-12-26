@@ -1,0 +1,130 @@
+.main-slider {
+	background: #fcf8f3;
+	// .main-slider__container
+	&__container {
+		padding: 140px 0px 0px 0px;
+		position: relative;
+		@media (min-width: $pc) {
+			&::before {
+				content: "";
+				background: #f9f1e7;
+				position: absolute;
+				top: 0;
+				width: 100vw;
+				right: 376px;
+				height: 100%;
+			}
+		}
+	}
+	// .main-slider__column
+	&__column {
+		//display: flex;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 2;
+		align-self: flex-start;
+		flex: 0 0 494/1240 * 100%;
+	}
+
+	// .main-slider__content
+	&__content {
+		position: relative;
+		z-index: 2;
+		align-self: flex-start;
+		flex: 0 0 494/1240 * 100%;
+	}
+
+	&__column {
+		display: flex;
+	}
+
+	&__control {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .main-slider__body
+	&__body {
+		flex: 1 1 auto;
+		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	// .main-slider__controls
+	&__controls {
+		align-self: stretch;
+		display: flex;
+		justify-content: space-between;
+	}
+	// .main-slider__paggination
+
+	// .main-slider__bullets
+	&__bullets {
+		display: flex;
+		gap: rem(28);
+		flex-wrap: wrap;
+		span {
+			width: 11px;
+			height: 11px;
+			background-color: #000;
+			border-radius: 50%;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	// .main-slider__arrows
+	&__arrows {
+		display: flex;
+	}
+	// .main-slider__arrow
+	&__arrow {
+	}
+	// .main-slider__arrow-prev
+	&__arrow-prev {
+	}
+	// .main-slider__arrow-next
+	&__arrow-next {
+	}
+	// .main-slider__slider
+	&__slider {
+		&.swiper {
+			overflow: visible;
+		}
+		flex: 1 1 auto;
+		width: 934px;
+	}
+	// .main-slider__swiper
+	&__swiper {
+		min-width: 0;
+	}
+	// .main-slider__slide
+	&__slide {
+	}
+	// .main-slider__image-ibg
+	&__image-ibg {
+		padding: 0 0 59.5% 0;
+	}
+}
+.content-slider {
+	padding: rem(60);
+	background-color: #fff;
+	// .content-slider__title
+	&__title {
+		font-weight: bold;
+		font-size: rem(56);
+		line-height: math.div(67, 56);
+	}
+	// .content-slider__text
+	&__text {
+		color: #898989;
+		font-size: rem(20);
+		font-weight: 500;
+	}
+	// .content-slider__btn
+	&__btn {
+	}
+}
