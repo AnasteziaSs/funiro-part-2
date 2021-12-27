@@ -37,10 +37,11 @@
 		z-index: 50;
 	}
 	&__row {
-		._header-scroll &{
-			margin-top: rem(6);
-		}
 		@include adaptiveValue("margin-top", 47, 15);
+		._header-scroll & {
+			margin-top: rem(0);
+		}
+
 		display: flex;
 		align-items: center;
 		@media (max-width: em(860)) {
@@ -96,6 +97,7 @@
 			@media (max-width: em(860)) {
 				margin-top: rem(18);
 				margin-left: rem(10);
+				border: 2px solid #F9F1E7;;
 			}
 		}
 	}
@@ -210,14 +212,16 @@
 }
 
 .submenu-products {
-	._header-scroll &{
+	._header-scroll & {
 		padding: rem(10);
-		background-color: rgba(255, 255, 255, 0.8);
+		@media (min-width: $mobile) {
+			background-color: rgba(255, 255, 255, 0.8);
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: rgba(255, 255, 255, 0.9);
 				}
 			}
+		}
 	}
 	display: none;
 	visibility: hidden;
@@ -266,14 +270,16 @@
 }
 
 .submenu-rooms {
-	._header-scroll &{
+	._header-scroll & {
 		padding: rem(10);
-		background-color: rgba(255, 255, 255, 0.8);
+		@media (min-width: $mobile) {
+			background-color: rgba(255, 255, 255, 0.8);
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: rgba(255, 255, 255, 0.9);
 				}
 			}
+		}
 	}
 	color: $mainColor;
 	display: none;
